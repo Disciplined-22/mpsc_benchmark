@@ -52,3 +52,26 @@ fn main() {
     .join()
     .unwrap();
 }
+
+
+
+// Note to programmer:
+//
+// In this demo, throughput is calculated at the Receiver endpoint,
+// meaning we measure how many messages were successfully processed.
+//
+// Measuring across the full Sender → Channel → Receiver pipeline
+// provides a more complete end to end throughput perspective.
+//
+// In real-world production systems, throughput metrics may differ
+// depending on where measurement occurs (send-side, receive-side,
+// network boundary, or internal queue).
+//
+// Production throughput is influenced by factors such as:
+// - Thread scheduling
+// - Lock contention
+// - Memory allocation
+// - Context switching
+// - Backpressure
+//
+// This example is a simplified educational benchmark intended for demonstration purposes.
